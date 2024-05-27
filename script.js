@@ -1,3 +1,5 @@
+let historico = [];
+
 document.getElementById('sorteio-btn').addEventListener('click', function() {
     const casas = ['Grifnória', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
     const audios = {
@@ -6,7 +8,10 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
         'Corvinal': 'Corvinal.mp3',
         'Lufa Lufa': 'Lufa.mp3'
     };
-   // Garante que a mesma casa não seja escolhida três vezes seguidas
+
+    let casaEscolhida;
+
+    // Garante que a mesma casa não seja escolhida três vezes seguidas
     do {
         casaEscolhida = casas[Math.floor(Math.random() * casas.length)];
     } while (historico.length >= 2 && casaEscolhida === historico[historico.length - 1] && casaEscolhida === historico[historico.length - 2]);

@@ -1,5 +1,5 @@
 document.getElementById('sorteio-btn').addEventListener('click', function() {
-    const casas = ['Gifnória', 'Sonseria', 'Corvinal', 'Lufa Lufa'];
+    const casas = ['Grifnoria', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
     const casaEscolhida = casas[Math.floor(Math.random() * casas.length)];
     const resultado = document.getElementById('resultado');
     resultado.textContent = casaEscolhida;

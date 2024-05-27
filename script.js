@@ -3,7 +3,7 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
     const audios = {
         'Grifnória': 'Grifnoria.mp3',
         'Sonserina': 'Sonserina.mp3',
-        'Corvinal': 'corvinal.mp3',
+        'Corvinal': 'Corvinal.mp3',
         'Lufa Lufa': 'Lufa.mp3'
     };
 

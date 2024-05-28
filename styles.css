@@ -5,7 +5,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://i.pinimg.com/736x/20/1f/4c/201f4c5c3af1d23982eaa20fccc536bc.jpg");
+    background-image: url('casas.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -15,6 +15,12 @@ body, html {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+video {
+    margin: 20px 0;
 }
 
 button {

@@ -1,18 +1,18 @@
 let historico = [];
 let contagemCasas = {
-    'Grifinória': 0,
+    'Grifnória': 0,
     'Sonserina': 0,
     'Corvinal': 0,
     'Lufa Lufa': 0
 };
 
 document.getElementById('sorteio-btn').addEventListener('click', function() {
-    const casas = ['Grifinória', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
+    const casas = ['Grifnória', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
     const audios = {
-        'Grifinória': 'Grifinoria.mp3',
-        'Sonserina': 'Sonserina.mp3',
-        'Corvinal': 'Corvinal.mp3',
-        'Lufa Lufa': 'Lufa.mp3'
+        'Grifnória': 'grifinoria.mp3',
+        'Sonserina': 'sonserina.mp3',
+        'Corvinal': 'corvinal.mp3',
+        'Lufa Lufa': 'lufa_lufa.mp3'
     };
 
     // Filtra casas que já atingiram o limite de 20 sorteios
@@ -38,14 +38,24 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
     // Incrementa a contagem da casa escolhida
     contagemCasas[casaEscolhida]++;
 
-    const resultado = document.getElementById('resultado');
-    resultado.textContent = casaEscolhida;
+    // Exibe o vídeo do chapéu seletor
+    const video = document.getElementById('chapeu-video');
+    video.style.display = 'block';
+    video.play();
 
-    const audio = new Audio(audios[casaEscolhida]);
-    audio.play();
-
-    // Exibe o resultado por 3 segundos
+    // Aguarda o tempo do vídeo para exibir o resultado
     setTimeout(() => {
-        resultado.textContent = '';
-    }, 10000);
+        video.style.display = 'none';
+
+        const resultado = document.getElementById('resultado');
+        resultado.textContent = casaEscolhida;
+
+        const audio = new Audio(audios[casaEscolhida]);
+        audio.play();
+
+        // Remove o resultado após 10 segundos
+        setTimeout(() => {
+            resultado.textContent = '';
+        }, 10000);
+    }, 6000); // Tempo do vídeo do chapéu seletor
 });

@@ -9,10 +9,10 @@ let contagemCasas = {
 document.getElementById('sorteio-btn').addEventListener('click', function() {
     const casas = ['Grifnória', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
     const audios = {
-        'Grifnória': 'grifinoria.mp3',
+        'Grifnória': 'grifnoria.mp3',
         'Sonserina': 'sonserina.mp3',
         'Corvinal': 'corvinal.mp3',
-        'Lufa Lufa': 'lufa_lufa.mp3'
+        'Lufa Lufa': 'lufa.mp3'
     };
 
     // Filtra casas que já atingiram o limite de 20 sorteios

@@ -11,14 +11,14 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
 
     let casaEscolhida;
 
-    // Garante que a mesma casa não seja escolhida três vezes seguidas
+    // Garante que a mesma casa não seja escolhida nos próximos dois sorteios
     do {
         casaEscolhida = casas[Math.floor(Math.random() * casas.length)];
-    } while (historico.length >= 2 && casaEscolhida === historico[historico.length - 1] && casaEscolhida === historico[historico.length - 2]);
+    } while (historico.includes(casaEscolhida));
 
     historico.push(casaEscolhida);
-    if (historico.length > 3) {
-        historico.shift(); // Mantém apenas os últimos 3 sorteios no histórico
+    if (historico.length > 2) {
+        historico.shift(); // Mantém apenas os últimos 2 sorteios no histórico
     }
 
     const resultado = document.getElementById('resultado');
@@ -27,3 +27,5 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
     const audio = new Audio(audios[casaEscolhida]);
     audio.play();
 });
+
+

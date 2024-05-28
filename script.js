@@ -1,15 +1,15 @@
 let historico = [];
 let contagemCasas = {
-    'Grifnória': 0,
+    'Grifinória': 0,
     'Sonserina': 0,
     'Corvinal': 0,
     'Lufa Lufa': 0
 };
 
 document.getElementById('sorteio-btn').addEventListener('click', function() {
-    const casas = ['Gifnória', 'Sonseria', 'Corvinal', 'Lufa Lufa'];
+    const casas = ['Grifinória', 'Sonserina', 'Corvinal', 'Lufa Lufa'];
     const audios = {
-        'Grifnória': 'Grfnoria.mp3',
+        'Grifinória': 'Grifinoria.mp3',
         'Sonserina': 'Sonserina.mp3',
         'Corvinal': 'Corvinal.mp3',
         'Lufa Lufa': 'Lufa.mp3'
@@ -43,4 +43,9 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
 
     const audio = new Audio(audios[casaEscolhida]);
     audio.play();
+
+    // Exibe o resultado por 3 segundos
+    setTimeout(() => {
+        resultado.textContent = '';
+    }, 3000);
 });

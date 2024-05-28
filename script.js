@@ -47,5 +47,5 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
     // Exibe o resultado por 3 segundos
     setTimeout(() => {
         resultado.textContent = '';
-    }, 3000);
+    }, 10000);
 });

@@ -57,5 +57,5 @@ document.getElementById('sorteio-btn').addEventListener('click', function() {
         setTimeout(() => {
             resultado.textContent = '';
         }, 10000);
-    }, 6000); // Tempo do vídeo do chapéu seletor
+    }, 4000); // Tempo do vídeo do chapéu seletor
 });
